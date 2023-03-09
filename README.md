@@ -102,7 +102,7 @@ Output :
 
 ![image](https://user-images.githubusercontent.com/95482289/223890066-52d52c10-37af-44db-a60e-8ff7dde582b8.png)
 
-** Contoh lain ketika menggunakan endforeach **
+**Contoh lain ketika menggunakan endforeach**
 
 ![image](https://user-images.githubusercontent.com/95482289/223890123-6b28ca82-23e6-45a7-a21b-e421ff9ac8d8.png)
 
