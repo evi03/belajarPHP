@@ -46,13 +46,81 @@ antara pengguna/admin website dan pengunjung website.
 
 ## EPISODE 4 VARIABELS ##
 Pada PHP tidak menggunakan operator pengabungan string seperti (+ / *), pada php Ketika ingin mengabungan string mengunakan operator “.”
+
 ![image](https://user-images.githubusercontent.com/95482289/223888170-3d94ddb7-4179-4c64-ae09-57ca32542e95.png)
 
 Step membuat dinamis menggunakan variable, untuk membuat variable diawali dengan tanda “$”. Contoh : membuat variable salam dengan isi HELLO
+
 ![image](https://user-images.githubusercontent.com/95482289/223888244-8c1a5be5-0697-4894-afae-9f401fcd5d83.png)
 
 Alasan mengapa mengunakan variable dari pada string biasa? Karena Variable akan merunjuk ke hal-hal yang tidak dapat kita kendalikan secara  statis. Contohnya dengan menggunakan variable bisa merunjuk ke masukan pengguna di dalammnya, merujuk sesuatu yang berasal dari  database, dan lain sebagainya.
+
 Contoh opsi lain ketika menggunakan variable ke dalam string. Tetapi perlu diingat ketika kita memasukan variable ke dalam string itu harus menggunakan tanda petik double, dan tidak boleh mengunakan tanda petik tungal.
+
+![image](https://user-images.githubusercontent.com/95482289/223889176-d659e2df-ae5f-4b9e-88d0-7f449a2575a6.png)
+
+
+## EPISODE 5 CONDITIONALS AND BOOLEANS ##
+Conditional statement merupakan salah satu fitur yang penting dalam php untuk mengeksekusi kode secara selektiif berdasarkan kondisi tertentu. Sedangkan Boolean adalah tipe data yang hanya memiliki dua nilai yaitu true dan false.
+
+Contoh ketika menggunakann statement if else dengan memangil variabel :
+
+![image](https://user-images.githubusercontent.com/95482289/223889324-7dcad485-adfb-43be-900c-515fe62d1fb9.png)
+
+perbedaan conditional dengan Boolean: 
+* a)	pada conditional statementnya tidak hanya bernilai true dan false dikarenakan statement pada conditional terdapat beberapa jenis meliputi : 
+    + if else : suatu kondisi jika satu kode bernilai true dan blok kode lainnya bernilai false
+    + if-elseif-else : digunakan untuk memeriksa kondisi jika kondisi pertama(if) tidak terpenuhi
+    ![image](https://user-images.githubusercontent.com/95482289/223889510-bbb368a8-953f-49d2-bb72-c6de97ed0154.png)
+    + switch statement : digunakan ketika ingin mengeksekusi kode berdasarkan nilai dari suatu variabel
+    
+    ![image](https://user-images.githubusercontent.com/95482289/223889581-fe20fa14-187e-4237-92b8-65ec4e3609a8.png)
+
+* b)	Boolean statementnya hanya memiliki 2 nilai yaitu true dan false contoh penggunaan Boolean:
+
+![image](https://user-images.githubusercontent.com/95482289/223889659-c19c863f-49b0-4b6e-8b74-584d6dff7535.png)
+
+Output
+
+![image](https://user-images.githubusercontent.com/95482289/223889691-87b6741a-b731-4e22-bb61-8cab05540f0f.png)
+
+Mengapa outputnya 1 dan 0? Dikarenakan jika tampilan menggunakan echo maka tipe data Boolean dipaksa berganti dengan tipe data string yang mana pada tipe data string 0 diangap sebagai false.
+
+
+## EPISODE 6 ARRAY ##
+Bagaimana jika ingin membuat beberapa kumpulan seperti daftar buku favorit, daftar nama mahasiswa dan lain sebagainya dan memasukannya ke dalam variabel? Jawabannya hal itu bisa dilakukan dengan menggunakan array dan membuatnya menjadi dinamis. Mengapa dinamis? Dikarenakan biasanya hal-hal seperti kumpulan data tersebut disimpan dalam database. Contoh membuat array pada variabel :
+
+![image](https://user-images.githubusercontent.com/95482289/223889846-41daaf2f-5510-4efa-a96f-eed7f271fbaf.png)
+
+Keterangan : 
+* fungsi foreach pada php digunakan untuk mengulang setiap elemen dalam sebuah array dan mengeksekusi kode yang diberikan pada setiap elemen.
+*	$daftarBuah adalah array yang ingin di ulang
+*	$buah adalah variabel yang menampung nilai dari setiap elemen array selema proses pengulangan
+*	Setiap kali pengulangan di lakukan variabel $buah akan di isi dengan nilai dari elemen array yang sedang di ulang
+
+Output :
+
+![image](https://user-images.githubusercontent.com/95482289/223890066-52d52c10-37af-44db-a60e-8ff7dde582b8.png)
+
+** Contoh lain ketika menggunakan endforeach **
+
+![image](https://user-images.githubusercontent.com/95482289/223890123-6b28ca82-23e6-45a7-a21b-e421ff9ac8d8.png)
+
+Keterangan :
+* Endforeach digunakan untuk menutup blok kode yang di awali dengan foreach(). Hal ini membantu menghindari kesalahan sintaks pada kode yang kompleks atau sulit dibaca. 
+*	Pada foreach menggunakan kurung kurawal {} untuk membungkus blok kode yang akan dijalankan. Sedangkan pada endforeach menggunakan titik dua : dan endforeach menggunakan semicolon untuk menutup blok kode.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
