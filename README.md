@@ -110,6 +110,86 @@ Keterangan :
 * Endforeach digunakan untuk menutup blok kode yang di awali dengan foreach(). Hal ini membantu menghindari kesalahan sintaks pada kode yang kompleks atau sulit dibaca. 
 *	Pada foreach menggunakan kurung kurawal {} untuk membungkus blok kode yang akan dijalankan. Sedangkan pada endforeach menggunakan titik dua : dan endforeach menggunakan semicolon untuk menutup blok kode.
 
+## EPISODE 7 ASSOCIATIVE ARRAYS ##
+Bagaimana cara ketika ingin berinteraksi dengan salah-satu index pada Array? Pertama tentunya membuat variabel yang berisi Array, kemudian cara me-ngeprin dengan memangil **nama variabel kemudian index mana yang ingin di print**. Contoh: 
+
+```php
+             $DaftarHewan = [
+                "Kuda nil",
+                "Paus",
+                "kucing",
+                "pingwin"
+            ];
+        ?>
+            
+        <p>
+                <?= $DaftarHewan[2] ?>
+        </p>
+        
+```
+
+Output :
+
+![image](https://user-images.githubusercontent.com/95482289/224532559-aad2440e-4d2d-4600-89ef-01b1e6cb00ce.png)
+
+
+Dari contoh diatas seharusnya yang keluar adalah paus  mengapa menjadi kucing? Jawabannya adalah kaerna index pada array dimulai dari 0 bukan 1
+
+
+Pada satu variabel kita juga bisa membuat beberapa array, contohnya :
+```php
+$DaftarBuku = [
+                [
+                    'judul' => 'Akuntansi Pengantar 1',
+                    'penulis' => 'Supardi',
+                    'tahun terbit' => '2009',
+                    'link' =>  'http://example.com'              
+                ],
+                [
+                    'judul' => 'Aplikasi Praktis Asuhan Keperawatan Keluarga',
+                    'penulis' => 'Komang Ayu Heni',
+                    'tahun terbit' => '2012',
+                    'link' =>  'http://example.com'              
+                ],
+            ];
+        ?>
+         <ul>
+            <?php foreach ($DaftarBuku as $buku) : ?>
+                <li>
+                    <a href="<?= $buku['link'] ?>">
+                        <?= $buku['name']; ?>
+                    </a>
+                </li>
+                <?php endforeach; ?>
+        </ul>   
+```
+
+Output :
+
+![image](https://user-images.githubusercontent.com/95482289/224532631-dcc9cffb-6dad-4b53-b894-fc2aa07e3469.png)
+
+
+tanda panah pada index array => berguna untuk memberi kata kunci pada array assosiativ. Kemudian cara untuk me-ngeprin pada array assosiative dengan cara menuliskan kata kunci bukan no indexnya contoh yang salah 
+
+'''php
+<?php foreach ($DaftarBuku as $buku) : ?>
+        <li>
+          <a href="<?= $buku['3'] ?>">
+              <?= $buku['0']; ?>
+          </a>
+       </li>
+<?php endforeach; ?>
+
+'''
+
+Output :
+
+![image](https://user-images.githubusercontent.com/95482289/224532675-befb7a86-158f-4282-9213-6e4020556307.png)
+
+**Associative Array** : Suatu array dengan index string dimana value nya tidak disimpan secara linear, melainkan dengan memberikan key tertentu
+
+
+## EPISODE 8 FUNCTIONS AND FILTERING ##
 
 
 
